@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/17 15:10:18 by nsantand          #+#    #+#             */
-/*   Updated: 2026/07/21 17:26:10 by nsantand         ###   ########.fr       */
+/*   Created: 2026/07/21 15:52:56 by nsantand          #+#    #+#             */
+/*   Updated: 2026/07/31 18:16:49 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include "PhoneBook.hpp"
+#include "Contact.hpp"
 
-void    Phonebook::searchContact(Contact& contact)
-{  
-    contact::
-    (-_-)
+int main(void)
+{
+
+    return(1);
 }
