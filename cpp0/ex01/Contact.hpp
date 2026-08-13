@@ -6,14 +6,14 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/21 16:16:27 by nsantand          #+#    #+#             */
-/*   Updated: 2026/08/04 11:39:49 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/08/13 15:07:37 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CONTACT_H
-# define CONTACT_H
-#include <iostream>
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 
+#include <iostream>
 class Contact
 {
     private:
