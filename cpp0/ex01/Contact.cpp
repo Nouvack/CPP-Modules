@@ -6,19 +6,13 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/21 14:46:56 by nsantand          #+#    #+#             */
-/*   Updated: 2026/08/13 18:32:34 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/08/14 17:06:37 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
-Contact::Contact(){
-    this->firstName = "";
-    this->lastName = "";
-    this->nickname = "";
-    this->phoneNumber = "";
-    this->darkestSecret = "";
-    
-};
+Contact::Contact() {}
+
 Contact::Contact(const std::string &fName, const std::string &lName,
 	const std::string &nName, const std::string &phoneNbr,
 	const std::string &darkSecret){
@@ -28,10 +22,6 @@ Contact::Contact(const std::string &fName, const std::string &lName,
 	phoneNumber = phoneNbr;
 	darkestSecret = darkSecret;
 }
-
-
-
-
 
 void Contact::setFirstName(const std::string &firstName)
 {

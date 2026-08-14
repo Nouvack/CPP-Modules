@@ -6,7 +6,7 @@
 #    By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/17 11:25:55 by nsantand          #+#    #+#              #
-#    Updated: 2026/07/31 18:14:11 by nsantand         ###   ########.fr        #
+#    Updated: 2026/08/14 16:42:34 by nsantand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ NAME     := awesomePhonebook
 CXX      := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 
-SRC := Contact.cpp main.cpp
+SRC := Contact.cpp main.cpp PhoneBook.cpp Utils.cpp
 OBJ := $(SRC:.cpp=.o)
 
 all: $(NAME)
