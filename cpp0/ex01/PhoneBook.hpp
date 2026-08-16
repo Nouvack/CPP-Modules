@@ -13,11 +13,11 @@
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-
-#include "Contact.hpp"
 #include <string>
 #include <iostream>
+#include <iomanip>
 #include "Utils.hpp"
+#include "Contact.hpp"
 
 class PhoneBook
 {
@@ -26,9 +26,12 @@ class PhoneBook
         int totalContacts;
     public:
         PhoneBook(/* args */);
-        Contact   newContact();
-        void addContact(Contact &contact);
         int currentIndex;
+        Contact   newContact();
+        void addContact(const Contact &contact);
+        void printContacts();
+        void displayName(std::string index);
+
 
 };
 

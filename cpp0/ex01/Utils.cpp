@@ -13,22 +13,44 @@
 #include "Utils.hpp"
 bool isValidText(std::string text)
 {
+    bool hasAlpha = false;
+	std::size_t i = 0;
+    while (isspace(text[i]))
+		i++;
+	if (i >= text.length())
+		return false;
     for(size_t k = 0; k < text.length(); k++)
     {
-        if (!std::isalpha(text[k])) {
-            return (false);
-        }
+        if (isalpha(text[i]))
+			hasAlpha = true;
+		else if (!isspace(text[i]) && text[i] != '-')
+			return (false);
     }
-    return (true);
+    return (hasAlpha);
 } 
 
-bool isValidNum(std::string text)
+bool isValidPhone(std::string text)
 {
     if(text.length() != 9)
         return(false);
     for(size_t k = 0; k < text.length(); k++)
     {
         if (!std::isdigit(text[k])) {
+            return (false);
+        }
+    }
+    return (true);
+} 
+
+
+bool isValidNum(std::string text, int totalC)
+{
+    if(text.length() != 1)
+        return(false);
+    for(size_t k = 0; k < text.length(); k++)
+    {
+    
+        if (!std::isdigit(text[k]) || text[k] - '0' > totalC ) {
             return (false);
         }
     }
@@ -62,6 +84,32 @@ std::string inputText(std::string text)
 }
 
 
+std::string inputIndex(std::string text, int totalC)
+{
+    std::string input;
+    
+    while(true)
+    {
+        std::cout << text;
+        
+        if (!std::getline(std::cin, input)) {
+            break; 
+        }
+        else if (input.empty()) {
+            std::cout << "Error: This field cannot be empty." << std::endl;
+        }
+        else if (!isValidNum(input, totalC)) {
+            std::cout << "Error: Invalid input" << std::endl;
+        }
+        else{
+            break;
+        }
+        
+    }
+    return (input);
+}
+
+
 std::string inputNum(std::string num)
 {
     std::string input;
@@ -78,7 +126,7 @@ std::string inputNum(std::string num)
         else if (input.empty()) {
             std::cout << "Error: This field cannot be empty." << std::endl;
         }
-        else if (!isValidNum(input)) {
+        else if (!isValidPhone(input)) {
             std::cout << "Error: Invalid input" << std::endl;
         }
         else{

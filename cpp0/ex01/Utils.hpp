@@ -16,11 +16,12 @@
 # define UTILS_HPP
 #include <iostream>
 #include <string>
-
+#include "PhoneBook.hpp"
 
 bool isValidText(std::string text);
-bool isValidNum(std::string text);
+bool isValidPhone(std::string text);
 std::string inputText(std::string text);
 std::string inputNum(std::string num);
+std::string inputIndex(std::string text, int totalC);
 
 #endif

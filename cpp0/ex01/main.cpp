@@ -24,7 +24,6 @@ int main(int argc, char **argv) {
     std::cout << "Welcome to the Awesome Phonebook, ";
     while (true) {
         std::cout << "Please enter your command (ADD, SEARCH, EXIT): ";
-
         if (!std::getline(std::cin, comand)) {
             std::cout << "\nEXIT" << std::endl;
             break; 
@@ -33,10 +32,10 @@ int main(int argc, char **argv) {
             continue; 
         }
         else if (comand == "ADD") {
-            book.newContact();
+            book.addContact(book.newContact());
         }
         else if (comand == "SEARCH") {
-            break;
+            book.printContacts();
         }
         else if (comand == "EXIT") {
             std::cout << "EXIT" << std::endl;
