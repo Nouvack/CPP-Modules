@@ -93,13 +93,16 @@ std::string inputIndex(std::string text, int totalC)
         std::cout << text;
         
         if (!std::getline(std::cin, input)) {
-            break; 
+            return(""); 
         }
         else if (input.empty()) {
             std::cout << "Error: This field cannot be empty." << std::endl;
         }
         else if (!isValidNum(input, totalC)) {
             std::cout << "Error: Invalid input" << std::endl;
+        }
+        else if (input == "EXIT") {
+            break; 
         }
         else{
             break;
@@ -135,4 +138,11 @@ std::string inputNum(std::string num)
         
     }
     return(input);
+}
+
+std::string formatField(const std::string &str) 
+{
+    if (str.length() > 10)
+        return str.substr(0, 9) + ".";
+    return str;
 }

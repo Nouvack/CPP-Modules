@@ -38,6 +38,11 @@ void PhoneBook::printContacts()
 {
     const int width = 10;
     std::string str;
+    
+    if (this->totalContacts == 0) {
+        std::cout << "Phonebook is empty." << std::endl;
+        return;
+    }
     std::cout << std::right << "|"
                 << std::setw(width) << "Index" << "|"
                 << std::setw(width) << "Name"  << "|"
@@ -54,20 +59,16 @@ void PhoneBook::printContacts()
     {
         std::cout << std::right << "|"
                     << std::setw(width) << i << "|"
-                    << std::setw(width) << (contactsList[i].getFirstName().length() > 10 ?
-                        contactsList[i].getFirstName().substr(0, 9) + "." :
-                        contactsList[i].getFirstName())  << "|"
-                    << std::setw(width) << (contactsList[i].getLastName().length() > 10 ?
-                        contactsList[i].getLastName().substr(0, 9) + "." :
-                        contactsList[i].getLastName()) << "|"
-                    << std::setw(width) << (contactsList[i].getNickname().length() > 10 ?
-                        contactsList[i].getNickname().substr(0, 9) + "." :
-                        contactsList[i].getNickname()) << "|\n";
+                    << std::setw(width) << formatField(contactsList[i].getFirstName()) << "|"
+                    << std::setw(width) << formatField(contactsList[i].getLastName()) << "|"
+                    << std::setw(width) << formatField(contactsList[i].getNickname()) << "|\n";
     }
     str = inputIndex("Select an index: ", totalContacts);
+    if (str.empty()) {
+        return; 
+    }
     displayName(str);
 }
-//DISPLAY EL NAME DEL INDEX SELECCIONADOA
 
 void PhoneBook::displayName(std::string index)
 {
@@ -77,5 +78,4 @@ void PhoneBook::displayName(std::string index)
     std::cout << "Nickname: " + contactsList[i].getNickname() << std::endl;
     std::cout << "Phonenumber: " + contactsList[i].getPhoneNumber() << std::endl;
     std::cout << "Darkestsecret: " + contactsList[i].getDarkestSecret() << std::endl;
-
 }

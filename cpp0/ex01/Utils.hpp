@@ -23,5 +23,5 @@ bool isValidPhone(std::string text);
 std::string inputText(std::string text);
 std::string inputNum(std::string num);
 std::string inputIndex(std::string text, int totalC);
-
+std::string formatField(const std::string &str) ;
 #endif

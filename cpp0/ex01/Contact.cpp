@@ -13,15 +13,6 @@
 #include "Contact.hpp"
 Contact::Contact() {}
 
-Contact::Contact(const std::string &fName, const std::string &lName,
-	const std::string &nName, const std::string &phoneNbr,
-	const std::string &darkSecret){
-    firstName = fName;
-	lastName = lName;
-	nickname = nName;
-	phoneNumber = phoneNbr;
-	darkestSecret = darkSecret;
-}
 
 void Contact::setFirstName(const std::string &firstName)
 {
