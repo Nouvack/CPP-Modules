@@ -6,7 +6,13 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/17 16:21:29 by nsantand          #+#    #+#             */
-/*   Updated: 2026/08/17 16:21:29 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/08/18 11:24:44 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Zombie.hpp"
+
+Zombie newZombie(const std::string& name)
+{
+    
+}
