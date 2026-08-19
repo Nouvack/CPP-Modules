@@ -116,7 +116,6 @@ std::string inputIndex(std::string text, int totalC)
 std::string inputNum(std::string num)
 {
     std::string input;
-    s
     
     while(true)
     {
