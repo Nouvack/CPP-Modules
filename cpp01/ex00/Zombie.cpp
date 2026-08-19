@@ -6,16 +6,11 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/17 16:17:54 by nsantand          #+#    #+#             */
-/*   Updated: 2026/08/19 17:46:38 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/08/19 17:07:14 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-
-Zombie::Zombie() 
-{
-    std::cout << "Constructor for a unnamed Zombie was called" << std::endl;
-}
 
 Zombie::Zombie(const std::string& name) : _name(name)
 {
@@ -31,9 +26,4 @@ Zombie::~Zombie()
 void Zombie::announce(void)
 {
     std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-void Zombie::setName(const std::string& name)
-{
-    _name = name;
 }

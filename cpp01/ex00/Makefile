@@ -6,7 +6,7 @@
 #    By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/17 11:25:55 by nsantand          #+#    #+#              #
-#    Updated: 2026/08/19 17:44:14 by nsantand         ###   ########.fr        #
+#    Updated: 2026/08/19 16:50:43 by nsantand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,11 @@ BLUE      = \033[1;34m
 CYAN      = \033[1;36m
 DEF_COLOR = \033[0;39m
 
-NAME     := moarBrainz
+NAME     := BraiiiiiiinnnzzzZ
 CXX      := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 
-SRC := main.cpp Zombie.cpp zombieHorde.cpp
+SRC := main.cpp newZombie.cpp randomChump.cpp Zombie.cpp
 OBJ := $(SRC:.cpp=.o)
 
 all: $(NAME)
