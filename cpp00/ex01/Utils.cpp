@@ -123,8 +123,7 @@ std::string inputNum(std::string num)
         std::cout << num;
         
         if (!std::getline(std::cin, input)) {
-            std::cout << "\nEXIT" << std::endl;
-            break; 
+            return(""); 
         }
         else if (input.empty()) {
             std::cout << "Error: This field cannot be empty." << std::endl;
