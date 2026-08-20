@@ -1,28 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/17 16:17:54 by nsantand          #+#    #+#             */
-/*   Updated: 2026/08/20 11:23:05 by nsantand         ###   ########.fr       */
+/*   Created: 2026/08/20 15:29:57 by nsantand          #+#    #+#             */
+/*   Updated: 2026/08/20 17:43:26 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-
-Zombie::Zombie(const std::string& name) : _name(name)
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
+#include "Weapon.hpp"
+class HumanA
 {
-    std::cout << "Constructor for " << name << " was called" << std::endl;
-}
+    private:
+        std::string _name;
+        Weapon& _weapon;
+    public:
+        HumanA(const std::string&,Weapon&);
+        ~HumanA();
+        void attack(void);
+};
 
-Zombie::~Zombie()
-{
-    std::cout << "Destructor for " << _name << " was called" << std::endl;
-}
 
-void Zombie::announce(void)
-{
-    std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
+#endif

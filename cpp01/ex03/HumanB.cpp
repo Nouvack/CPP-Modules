@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/17 16:17:54 by nsantand          #+#    #+#             */
-/*   Updated: 2026/08/20 11:23:05 by nsantand         ###   ########.fr       */
+/*   Created: 2026/08/20 17:01:02 by nsantand          #+#    #+#             */
+/*   Updated: 2026/08/20 17:45:19 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-Zombie::Zombie(const std::string& name) : _name(name)
-{
-    std::cout << "Constructor for " << name << " was called" << std::endl;
+HumanB::HumanB(const std::string& name): _name(name), _weapon(NULL) {
+    std::cout << "Constructor for " << _name << " was called" << std::endl;
 }
 
-Zombie::~Zombie()
+HumanB::~HumanB()
 {
     std::cout << "Destructor for " << _name << " was called" << std::endl;
 }
-
-void Zombie::announce(void)
+void HumanB::attack(void)
 {
-    std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    std::cout << _name << " attacks with their " << _weapon->getType() << std::endl;
+}
+
+void HumanB::setWeapon(Weapon& weapon)
+{
+    _weapon = &weapon;
 }

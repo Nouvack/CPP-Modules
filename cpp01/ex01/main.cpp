@@ -6,7 +6,7 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/19 16:43:43 by nsantand          #+#    #+#             */
-/*   Updated: 2026/08/19 17:43:47 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/08/20 11:43:18 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,10 @@
 int main()
 {
     Zombie *z = zombieHorde(3, "Tony");
-    
+    for(int i = 0; i < 3; i++)
+    {
+        z[i].announce();
+    }
     delete[] z;
     return 0;
 }

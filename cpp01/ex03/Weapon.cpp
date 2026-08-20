@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Zombie.cpp                                         :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/17 16:17:54 by nsantand          #+#    #+#             */
-/*   Updated: 2026/08/20 11:23:05 by nsantand         ###   ########.fr       */
+/*   Created: 2026/08/20 15:16:30 by nsantand          #+#    #+#             */
+/*   Updated: 2026/08/20 17:57:18 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
 
-Zombie::Zombie(const std::string& name) : _name(name)
+
+#include "Weapon.hpp"
+Weapon::Weapon(){}
+
+Weapon::Weapon(const std::string& name): type(name)
 {
-    std::cout << "Constructor for " << name << " was called" << std::endl;
+    std::cout << "Constructor for " << type << " was called" << std::endl;
 }
 
-Zombie::~Zombie()
+Weapon::~Weapon()
 {
-    std::cout << "Destructor for " << _name << " was called" << std::endl;
+    std::cout << "Destructor for " << type << " was called" << std::endl;
+    
 }
 
-void Zombie::announce(void)
+void Weapon::setType(const std::string& string)
 {
-    std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+    this->type = string;
+}
+
+
+const std::string& Weapon::getType() const
+{
+    return(this->type);
 }
