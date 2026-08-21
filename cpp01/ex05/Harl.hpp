@@ -1,30 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/20 18:34:29 by nsantand          #+#    #+#             */
-/*   Updated: 2026/08/21 17:56:57 by nsantand         ###   ########.fr       */
+/*   Created: 2026/08/21 18:16:58 by nsantand          #+#    #+#             */
+/*   Updated: 2026/08/21 18:29:45 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "MyReplace.hpp"
+#ifndef HARL_HPP
+# define HARL_HPP
 
-
-int main(int argc, char const **argv)
+#include <iostream>
+class Harl
 {
-    if(argc != 4){
-        std::cout << "Error: Invalid arguments" << std::endl;
-        return(1);
-    }
-    std::string filename = argv[1];
-    std::string s1 = argv[2];
-    std::string s2 = argv[3];
+private:
+    void debug( void );
+    void info( void );
+    void warning( void );
+    void error( void );
     
-    if(!myReplace(filename, s1, s2)){
-        return(1);
-    }
-    return 0;
-}
+public:
+    Harl(/* args */);
+    void complain(const std::string&);
+};
+
+
+
+#endif

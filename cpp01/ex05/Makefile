@@ -16,11 +16,11 @@ BLUE      = \033[1;34m
 CYAN      = \033[1;36m
 DEF_COLOR = \033[0;39m
 
-NAME     := sedIsForLosers
+NAME     := harl
 CXX      := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 
-SRC := main.cpp MyReplace.cpp
+SRC := main.cpp Harl.cpp
 OBJ := $(SRC:.cpp=.o)
 
 all: $(NAME)
