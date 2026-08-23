@@ -6,7 +6,7 @@
 #    By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/17 11:25:55 by nsantand          #+#    #+#              #
-#    Updated: 2026/07/14 17:14:47 by nsantand         ###   ########.fr        #
+#    Updated: 2026/08/14 16:42:34 by nsantand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,11 @@ BLUE      = \033[1;34m
 CYAN      = \033[1;36m
 DEF_COLOR = \033[0;39m
 
-NAME     := megaphone
+NAME     := fixed
 CXX      := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 
-SRC := megaphone.cpp
+SRC := main.cpp Fixed.cpp
 OBJ := $(SRC:.cpp=.o)
 
 all: $(NAME)
