@@ -5,22 +5,27 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/08/25 15:16:08 by nsantand          #+#    #+#             */
-/*   Updated: 2026/08/25 15:16:08 by nsantand         ###   ########.fr       */
+/*   Created: 2026/08/25 15:16:45 by nsantand          #+#    #+#             */
+/*   Updated: 2026/08/25 15:16:45 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
-
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 int main( void ) {
-    Fixed a;
-    Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
+    
+    ClapTrap noam("Noam");
+    
+    noam.takeDamage(20);
+    noam.attack("Marvin");
+    noam.beRepaired(10);
+    
+    std::cout << "--------------------------" << std::endl;
+    ScavTrap marvin("Marvin");
+    marvin.takeDamage(200);
+    marvin.attack("Noam"),
+    marvin.beRepaired(2);
+    marvin.guardGate();
 
-    std::cout << a << std::endl;
-    std::cout << ++a << std::endl;
-    std::cout << a << std::endl;
-    std::cout << a++ << std::endl;
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-    std::cout << Fixed::max( a, b ) << std::endl;
+    return 0;
 }

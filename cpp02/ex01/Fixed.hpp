@@ -1,3 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/25 14:30:03 by nsantand          #+#    #+#             */
+/*   Updated: 2026/08/25 14:30:03 by nsantand         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef FIXED_HPP
+# define FIXED_HPP
 #include <iostream>
 #include <cmath>
 class Fixed
@@ -21,4 +35,5 @@ public:
 };
 std::ostream& operator<<(std::ostream& out, const Fixed& fixed);
 
+#endif
 

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/08/25 15:16:03 by nsantand          #+#    #+#             */
+/*   Updated: 2026/08/25 15:16:03 by nsantand         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Fixed.hpp"
 
 const int Fixed::_fractionalBits = 8;
@@ -55,32 +67,32 @@ Fixed& Fixed::operator=(const Fixed& other)
 	return (*this);
 }
 
-bool Fixed::operator<(const Fixed& other)
+bool Fixed::operator<(const Fixed& other) const
 {
     return(this->_rawBits < other._rawBits);
 }
 
-bool Fixed::operator>(const Fixed& other)
+bool Fixed::operator>(const Fixed& other)const
 {
     return(this->_rawBits > other._rawBits);
 }
 
-bool Fixed::operator<=(const Fixed& other)
+bool Fixed::operator<=(const Fixed& other)const
 {
     return(this->_rawBits <= other._rawBits);
 }
 
-bool Fixed::operator<(const Fixed& other)
+bool Fixed::operator>=(const Fixed& other)const
 {
     return(this->_rawBits >= other._rawBits);
 }
 
-bool Fixed::operator==(const Fixed& other)
+bool Fixed::operator==(const Fixed& other)const
 {
     return(this->_rawBits == other._rawBits);
 }
 
-bool Fixed::operator!=(const Fixed& other)
+bool Fixed::operator!=(const Fixed& other)const
 {
     return(this->_rawBits != other._rawBits);
 }
@@ -155,4 +167,33 @@ int Fixed::getRawBits(void) const
 void Fixed::setRawBits(int const raw)
 {
     _rawBits = raw;
+}
+
+
+Fixed&		Fixed::min(Fixed& a, Fixed& b)
+{
+	if (a < b)
+		return (a);
+	return (b);
+}
+
+Fixed const&	Fixed::min(Fixed const& a, Fixed const& b)
+{
+	if (a < b)
+		return (a);
+	return (b);
+}
+
+Fixed&		Fixed::max(Fixed& a, Fixed& b)
+{
+	if (a > b)
+		return (a);
+	return (b);
+}
+
+Fixed const&	Fixed::max(Fixed const& a, Fixed const& b)
+{
+	if (a > b)
+		return (a);
+	return (b);
 }
