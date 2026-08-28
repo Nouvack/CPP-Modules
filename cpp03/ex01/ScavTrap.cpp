@@ -6,7 +6,7 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 11:40:38 by nsantand          #+#    #+#             */
-/*   Updated: 2026/08/26 16:59:32 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/08/28 14:48:08 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 ScavTrap::ScavTrap() : ClapTrap("Default")
 {
+    _hitPoints = 100;
+    _energyPoints = 50;
+    _attackDamage = 20;
     std::cout << "ScavTrap default constructor called" << std::endl;
 }
 
@@ -30,7 +33,6 @@ ScavTrap::~ScavTrap()
 {
     std::cout << "ScavTrap destructor for " << _name << " called" << std::endl;
 }
-
 
 ScavTrap::ScavTrap(const ScavTrap& other): ClapTrap(other)
 {
@@ -62,7 +64,7 @@ void ScavTrap::guardGate()
 {
     if (_hitPoints <= 0)
     {
-        std::cout << "ScavTrap " << _name << " can't attack! (No hit points left)" << std::endl;
+        std::cout << "ScavTrap " << _name << " can't enter Gate keeper mode! (No hit points left)" << std::endl;
         return;
     }
     std::cout << "ScavTrap " << _name << " is now in Gate keeper mode" << std::endl;

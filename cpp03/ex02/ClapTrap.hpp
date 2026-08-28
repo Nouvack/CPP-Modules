@@ -6,13 +6,15 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 11:39:28 by nsantand          #+#    #+#             */
-/*   Updated: 2026/08/26 16:31:49 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/08/28 14:48:27 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
+
 #include <iostream>
+
 class ClapTrap
 {
     protected:

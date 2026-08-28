@@ -6,7 +6,7 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/26 17:05:42 by nsantand          #+#    #+#             */
-/*   Updated: 2026/08/26 17:10:18 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/08/28 14:48:37 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@
 
 FragTrap::FragTrap() : ClapTrap("Default")
 {
+    _hitPoints = 100;
+    _energyPoints = 100;
+    _attackDamage = 30;
     std::cout << "FragTrap default constructor called" << std::endl;
 }
 
@@ -43,7 +46,6 @@ FragTrap::~FragTrap()
     std::cout << "FragTrap destructor for " << _name << " called" << std::endl;
 }
 
-
 FragTrap::FragTrap(const FragTrap& other): ClapTrap(other)
 {
 	std::cout << "FragTrap copy constructor called" << std::endl;
@@ -58,7 +60,6 @@ FragTrap& FragTrap::operator=(const FragTrap& other)
 	}
 	return (*this);
 }
-
 
 void FragTrap::highFivesGuys(void)
 {

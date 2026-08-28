@@ -12,6 +12,7 @@
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+
 int main( void ) {
     
     ClapTrap noam("Noam");
@@ -23,7 +24,7 @@ int main( void ) {
     std::cout << "--------------------------" << std::endl;
     ScavTrap marvin("Marvin");
     marvin.takeDamage(200);
-    marvin.attack("Noam"),
+    marvin.attack("Noam");
     marvin.beRepaired(2);
     marvin.guardGate();
 

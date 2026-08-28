@@ -13,6 +13,7 @@
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
 #include "FragTrap.hpp"
+
 int main( void ) {
     
     ClapTrap noam("Noam");
@@ -25,7 +26,7 @@ int main( void ) {
     ScavTrap marvin("Marvin");
 
     marvin.takeDamage(200);
-    marvin.attack("Noam"),
+    marvin.attack("Noam");
     marvin.beRepaired(2);
     marvin.guardGate();
 
