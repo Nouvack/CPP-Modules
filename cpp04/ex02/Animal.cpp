@@ -6,7 +6,7 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 15:43:42 by nsantand          #+#    #+#             */
-/*   Updated: 2026/08/28 17:11:01 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/08/29 11:55:42 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,6 @@ Animal& Animal::operator=(const Animal& other)
 		type = other.type;
 	}
 	return (*this);
-}
-void Animal::makeSound() const
-{
-    std::cout << type <<": Animal sound" << std::endl;
 }
 
 const std::string& Animal::getType() const

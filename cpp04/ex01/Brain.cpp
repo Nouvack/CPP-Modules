@@ -6,7 +6,7 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:49:20 by nsantand          #+#    #+#             */
-/*   Updated: 2026/08/28 18:09:25 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/08/29 11:54:01 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ Brain& Brain::operator=(const Brain& other)
 	return (*this);
 }
 
-std::string Brain::getIdea(int index) const
+std::string Brain::getIdea(size_t index) const
 {
     if (index >= 100)
 		return (std::string());

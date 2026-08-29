@@ -6,7 +6,7 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/08/28 17:38:36 by nsantand          #+#    #+#             */
-/*   Updated: 2026/08/28 18:09:23 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/08/29 11:53:51 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ class Brain
         ~Brain();
         Brain(const Brain& other);
 		Brain& operator=(const Brain& other);
-        std::string getIdea(int index) const;
+        std::string getIdea(size_t index) const;
         void setIdea(size_t index, const std::string& idea);
 
 };
