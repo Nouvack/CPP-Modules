@@ -6,14 +6,16 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/07 18:59:54 by nsantand          #+#    #+#             */
-/*   Updated: 2026/09/07 19:01:26 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/09/08 18:04:27 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
 
-int main(int argc, char const *argv[])
+int main()
 {
-    Bureaucrat nig()
+    Bureaucrat nig("hola", 10);
+    
+    std::cout << nig << std::endl;
     return 0;
 }

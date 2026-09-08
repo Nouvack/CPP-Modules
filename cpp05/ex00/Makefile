@@ -16,7 +16,7 @@ BLUE      = \033[1;34m
 CYAN      = \033[1;36m
 DEF_COLOR = \033[0;39m
 
-NAME     := animal
+NAME     := bureaucrat
 CXX      := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 

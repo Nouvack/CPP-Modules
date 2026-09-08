@@ -6,7 +6,7 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/03 18:19:45 by nsantand          #+#    #+#             */
-/*   Updated: 2026/09/07 18:58:29 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/09/08 18:04:13 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,18 @@ void Bureaucrat::decrement()
         throw Bureaucrat::GradeTooHighException();
     }
     _grade--;
+}
+
+const char* Bureaucrat::GradeTooHighException::what() const throw() {
+    return "Error: Grade too high. (Valid Range: 1 - 150)";
+}
+
+const char* Bureaucrat::GradeTooLowException::what() const throw() {
+    return "Error: Grade too low. (Valid Range: 1 - 150)";
+}
+
+std::ostream& operator<<(std::ostream& out, const Bureaucrat& bureaucrat)
+{
+    out << bureaucrat.getName() << ", bureaucrat grade " << bureaucrat.getGrade();
+    return out;
 }

@@ -6,7 +6,7 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/02 13:35:27 by nsantand          #+#    #+#             */
-/*   Updated: 2026/09/07 18:59:38 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/09/08 18:00:50 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,10 @@ class Bureaucrat
             virtual const char* what() const throw();
         };
         
+
+        
 };
 
-
+std::ostream& operator<<(std::ostream& out, const Bureaucrat& bureaucrat);
 
 #endif
