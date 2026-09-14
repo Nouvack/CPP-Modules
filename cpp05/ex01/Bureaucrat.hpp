@@ -42,6 +42,7 @@ class Bureaucrat
             virtual const char* what() const throw();
         };
         
+        void signForm();
 
         
 };

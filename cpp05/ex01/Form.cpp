@@ -15,21 +15,14 @@
 #include "Form.hpp"
 
 
-Form::Form() :_name("Default")
+Form::Form() : _name("Default"), _isSigned(false), _signGrade(150), _executeGrade(150)
 {
     std::cout << "Form default constructor called" << std::endl;
 }
 
-Form::Form(const std::string& name, const size_t& grade): _name(name), _grade(grade)
+Form::Form(const std::string& name,const size_t& signGrade, const size_t& executeGrade): _name(name), _isSigned(false), _signGrade(signGrade), _executeGrade(executeGrade)
 {
-    if(_grade < 1 )
-    {
-        throw Form::GradeTooLowException();
-    }
-    if(_grade > 150)
-    {
-        throw Form::GradeTooHighException();
-    }
+
     std::cout << "Form constructor for " << _name << " called" << std::endl;
     
 }
@@ -39,60 +32,64 @@ Form::~Form()
     std::cout << "Form destructor for " << _name << " called" << std::endl;
 }
 
-Form::Form(const Form& other):_name(other._name)
+
+Form::Form(const Form& other) : _name(other._name), _isSigned(other._isSigned), _signGrade(other._signGrade), _executeGrade(other._executeGrade)
 {
-	std::cout << "Form copy constructor called" << std::endl;
+    std::cout << "Form copy constructor called" << std::endl;
 }
 
 Form& Form::operator=(const Form& other)
 {
     std::cout << "Form copy assignment operator called" << std::endl;
-	if (this != &other)
-	{
-		_grade = other.getGrade();
-	}
-	return (*this);
+    
+    if (this != &other)
+    {
+        this->_isSigned = other._isSigned; 
+    }
+    return (*this);
 }
-
-const size_t& Form::getGrade() const
-{
-    return(_grade);
-}
-
 const std::string& Form::getName() const
 {
     return(_name);
 }
 
-
-void Form::increment()
+const bool& Form::getSigned() const
 {
-    if(_grade < 1 )
-    {
-        throw Form::GradeTooLowException();
-    }
-    _grade--;
+    return(_isSigned);
 }
 
-void Form::decrement()
+const size_t& Form::getSignGrade() const
 {
-    if(_grade > 150)
-    {
-        throw Form::GradeTooHighException();
-    }
-    _grade--;
+    return(_signGrade);
+}
+
+const size_t& Form::getExecuteGrade() const
+{
+    return(_executeGrade);
 }
 
 const char* Form::GradeTooHighException::what() const throw() {
-    return "Error: Grade too high. (Valid Range: 1 - 150)";
+    return "Error: Grade too high";
 }
 
 const char* Form::GradeTooLowException::what() const throw() {
-    return "Error: Grade too low. (Valid Range: 1 - 150)";
+    return "Error: Grade too low";
 }
 
-std::ostream& operator<<(std::ostream& out, const Form& Form)
+void Form::beSigned(const Bureaucrat& bureaucrat)
 {
-    out << Form.getName() << ", Form grade " << Form.getGrade();
+    if (bureaucrat.getGrade() >_signGrade) {
+        throw Form::GradeTooLowException();
+    }
+    _isSigned = true;
+}
+
+std::ostream& operator<<(std::ostream& out, const Form& form)
+{
+    out << "Form called " << form.getName() 
+        << ", signed status: " << (form.getSigned() ? "True" : "False") 
+        << ", grade required to sign: " << form.getSignGrade() 
+        << ", grade required to execute: " << form.getExecuteGrade() << ".";
+    
     return out;
 }
