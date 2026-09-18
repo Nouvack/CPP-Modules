@@ -39,10 +39,10 @@ class Form
             virtual const char* what() const throw();
         };
         
-        const std::string& Form::getName() const;
-        const bool& Form::getSigned() const;
-        const size_t& Form::getExecuteGrade() const;
-        const size_t& Form::getSignGrade() const;
+        const std::string& getName() const;
+        const bool& getSigned() const;
+        const size_t& getExecuteGrade() const;
+        const size_t& getSignGrade() const;
         void beSigned(const Bureaucrat&);
 };
 

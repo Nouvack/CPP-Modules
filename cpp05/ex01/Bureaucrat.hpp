@@ -13,6 +13,7 @@
 #ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 #include <iostream>
+#include "Form.hpp"
 class Bureaucrat
 {
     private:
@@ -42,7 +43,7 @@ class Bureaucrat
             virtual const char* what() const throw();
         };
         
-        void signForm();
+        void signForm(const Form& );
 
         
 };
