@@ -17,17 +17,17 @@ class Bureaucrat
 {
     private:
         const std::string _name;
-        size_t _grade;
+        int _grade;
     public:
         Bureaucrat(/* args */);
-        Bureaucrat(const std::string&, const size_t&);
+        Bureaucrat(const std::string&, const int&);
         Bureaucrat(const Bureaucrat& other);
         Bureaucrat& operator=(const Bureaucrat& other);
         ~Bureaucrat();
         
         
         const std::string& getName() const;
-        const size_t& getGrade() const;
+        const int& getGrade() const;
         
         void increment();
         void decrement();
