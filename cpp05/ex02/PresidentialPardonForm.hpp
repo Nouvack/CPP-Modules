@@ -6,7 +6,7 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 17:16:33 by nsantand          #+#    #+#             */
-/*   Updated: 2026/09/30 18:31:02 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/10/02 18:44:06 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class PresidentialPardonForm : public AForm
 {
     private:
-        const std::string _target;
+        std::string _target;
     public:
         PresidentialPardonForm(/* args */);
         PresidentialPardonForm(const std::string&);
