@@ -10,55 +10,23 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include "Bureaucrat.hpp"
+#include "Bureaucrat.hpp"
+#include "PresidentialPardonForm.hpp"
+int main()
+{
+    try
+    {
+        std::cout << "FIRST TEST: Invalid Form\n" << std::endl;
+        PresidentialPardonForm prueba("Invalid");
+        Bureaucrat hello;
 
-// int main()
-// {
-//     try
-//     {
-//         std::cout << "FIRST TEST: Invalid Form\n" << std::endl;
-//         Form invalidForm("Invalid", 0 , 150);
-//     }
-//     catch(const std::exception& e)
-//     {
-//         std::cerr << "This is the error: " << e.what() << std::endl;
-//     }
-//     std::cout << "---------------------------------------------------" << std::endl;
-//     try
-//     {
-//         std::cout << "SECOND TEST: Invalid grade\n" << std::endl;
-//         Form form("Form", 1,1);
-//         Bureaucrat cadet("cadet", 150);
-
-//         std::cout << form << std::endl;
-//         std::cout << cadet << std::endl;
-
-//         cadet.signForm(form);
-//         std::cout << form << std::endl;
-
-//     }
-//     catch(const std::exception& e)
-//     {
-//         std::cerr << "This is the error: " << e.what() << std::endl;
-//     }
+        prueba.
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << "This is the error: " << e.what() << std::endl;
+    }
+    std::cout << "---------------------------------------------------" << std::endl;
     
-//     std::cout << "---------------------------------------------------" << std::endl;
-//     try
-//     {
-//         std::cout << "THIRD TEST: Valid grade\n" << std::endl;
-//         Form form("Form", 1,1);
-//         Bureaucrat importandPerson("Importand person", 1);
-
-//         std::cout << form << std::endl;
-//         std::cout << importandPerson << std::endl;
-
-//         importandPerson.signForm(form);
-//         std::cout << form << std::endl;
-
-//     }
-//     catch(const std::exception& e)
-//     {
-//         std::cerr << "This is the error: " << e.what() << std::endl;
-//     }
-//     return 0;
-// }
+    return 0;
+}

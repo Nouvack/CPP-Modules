@@ -27,7 +27,7 @@ class Bureaucrat
         Bureaucrat& operator=(const Bureaucrat& other);
         ~Bureaucrat();
         
-        
+        void executeForm(AForm const & form) const;//Terminar con la implementacion de execute form para luego probar si funcina el presidentialform
         const std::string& getName() const;
         const int& getGrade() const;
         

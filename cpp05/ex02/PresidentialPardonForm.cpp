@@ -6,7 +6,7 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 17:16:31 by nsantand          #+#    #+#             */
-/*   Updated: 2026/10/02 18:55:06 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/10/15 16:44:16 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,10 @@ PresidentialPardonForm& PresidentialPardonForm::operator=(const PresidentialPard
     return (*this);
 }
 
+void PresidentialPardonForm::executeActivate() const
+{
+    std::cout << _target <<" has been pardoned by Zaphod Beeblebrox" << std::endl;
+}
 
 std::ostream& operator<<(std::ostream& out, const PresidentialPardonForm& PresidentialPardonForm)
 {
@@ -57,9 +61,4 @@ std::ostream& operator<<(std::ostream& out, const PresidentialPardonForm& Presid
         << ", grade required to execute: " << PresidentialPardonForm.getExecuteGrade() << ".";
     
     return out;
-}
-
-void PresidentialPardonForm::execute(Bureaucrat const & executor)
-{
-    
 }
