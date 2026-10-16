@@ -12,15 +12,18 @@
 
 #include "Bureaucrat.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "RobotomyRequestForm.hpp"
 int main()
 {
     try
     {
         std::cout << "FIRST TEST: Invalid Form\n" << std::endl;
         PresidentialPardonForm prueba("Invalid");
+        RobotomyRequestForm robot("ROBO");
         Bureaucrat hello;
 
-        prueba.
+        hello.executeForm(prueba);
+        std::cout << hello << std::endl;
     }
     catch(const std::exception& e)
     {
