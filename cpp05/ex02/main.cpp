@@ -18,12 +18,19 @@ int main()
     try
     {
         std::cout << "FIRST TEST: Invalid Form\n" << std::endl;
+        std::cout << "---------------------------------------------------" << std::endl;
         PresidentialPardonForm prueba("Invalid");
         RobotomyRequestForm robot("ROBO");
-        Bureaucrat hello;
+        Bureaucrat hello("home", 26);
+        std::cout << "---------------------------------------------------" << std::endl;
+        
+        hello.signForm(robot);
+        hello.executeForm(robot);
+        std::cout << "---------------------------------------------------" << std::endl;
 
-        hello.executeForm(prueba);
         std::cout << hello << std::endl;
+        std::cout << "---------------------------------------------------" << std::endl;
+
     }
     catch(const std::exception& e)
     {

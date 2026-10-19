@@ -6,7 +6,7 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 17:16:28 by nsantand          #+#    #+#             */
-/*   Updated: 2026/10/16 19:14:43 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/10/19 17:50:13 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void RobotomyRequestForm::executeActivate() const
 
 std::ostream& operator<<(std::ostream& out, const RobotomyRequestForm& RobotomyRequestForm)
 {
-    out << "RobotomyRequestForm called " << RobotomyRequestForm.getName() 
+    out << " RobotomyRequestForm called " << RobotomyRequestForm.getName() 
         << ", signed status: " << (RobotomyRequestForm.getSigned() ? "True" : "False") 
         << ", grade required to sign: " << RobotomyRequestForm.getSignGrade() 
         << ", grade required to execute: " << RobotomyRequestForm.getExecuteGrade() << ".";
