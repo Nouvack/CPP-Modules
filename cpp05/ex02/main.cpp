@@ -15,6 +15,7 @@
 #include "RobotomyRequestForm.hpp"
 int main()
 {
+    srand(time(NULL));
     try
     {
         std::cout << "FIRST TEST: Invalid Form\n" << std::endl;

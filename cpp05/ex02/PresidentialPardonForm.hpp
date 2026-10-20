@@ -6,13 +6,12 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 17:16:33 by nsantand          #+#    #+#             */
-/*   Updated: 2026/10/15 16:44:25 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/10/20 18:02:57 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PRESIDENTIALPARDONFORM_HPP
 # define PRESIDENTIALPARDONFORM_HPP
-#include <iostream>
 #include "AForm.hpp"
 
 class PresidentialPardonForm : public AForm

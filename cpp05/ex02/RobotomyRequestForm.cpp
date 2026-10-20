@@ -6,7 +6,7 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 17:16:28 by nsantand          #+#    #+#             */
-/*   Updated: 2026/10/19 17:50:13 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/10/20 17:23:48 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void RobotomyRequestForm::executeActivate() const
     }
     else
     {
-        std::cout << " the robotomy failed" << std::endl;
+        std::cout << "the robotomy failed" << std::endl;
     }
 }
 
