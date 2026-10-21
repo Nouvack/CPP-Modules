@@ -6,7 +6,7 @@
 /*   By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 17:16:28 by nsantand          #+#    #+#             */
-/*   Updated: 2026/10/20 18:16:51 by nsantand         ###   ########.fr       */
+/*   Updated: 2026/10/21 20:09:09 by nsantand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,18 +48,22 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 
 void ShrubberyCreationForm::executeActivate() const
 {
-    std::ofstream archive(_target + "_shrubbery");
-    if(archive.is_open())//cambiar a un trycatch, terminar y probar essta implementacion y ya estaria terminado este ejercicio
+    std::ofstream archive((_target + "_shrubbery").c_str());
+
+    if (!archive.is_open())
     {
-        archive << "       ###";
-        archive << "      #o###";
-        archive << "    #####o###";
-        archive << "   #o#\#|#/###";
-        archive << "    ###\|/#o#";
-        archive << "     # }|{  #";
-        archive << "       }|{" << std::endl;
-        archive.close();
+        throw std::runtime_error("Error: No se pudo crear el archivo " + _target + "_shrubbery");
     }
+
+    archive << "       ###\n";
+    archive << "      #o###\n";
+    archive << "    #####o###\n";
+    archive << "   #o#\\#|#/###\n";
+    archive << "    ###\\|/#o#\n";
+    archive << "     # }|{  #\n";
+    archive << "       }|{" << std::endl;
+
+    archive.close();
 }
       
 
