@@ -20,18 +20,13 @@ int main()
     {
         try
         {
-            std::cout << "FIRST TEST: Invalid Form\n" << std::endl;
+            std::cout << "FIRST TEST" << std::endl;
             std::cout << "---------------------------------------------------" << std::endl;
             PresidentialPardonForm prueba("Invalid");
-            RobotomyRequestForm robot("ROBO");
-            ShrubberyCreationForm shu("shipibo");
-
             Bureaucrat hello("home", 26);
-            std::cout << "---------------------------------------------------" << std::endl;
             
-            hello.signForm(shu);
-            hello.executeForm(shu);
-            std::cout << "---------------------------------------------------" << std::endl;
+            hello.signForm(prueba);
+            hello.executeForm(prueba);
 
             std::cout << hello << std::endl;
             std::cout << "---------------------------------------------------" << std::endl;
@@ -42,6 +37,45 @@ int main()
             std::cerr << "This is the error: " << e.what() << std::endl;
         }
     }
-    
+    {
+        try
+        {
+            std::cout << "SECOND TEST" << std::endl;
+            std::cout << "---------------------------------------------------" << std::endl;
+            RobotomyRequestForm prueba("Invalid");
+            Bureaucrat hello("home", 26);
+            
+            hello.signForm(prueba);
+            hello.executeForm(prueba);
+
+            std::cout << hello << std::endl;
+            std::cout << "---------------------------------------------------" << std::endl;
+
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << "This is the error: " << e.what() << std::endl;
+        }
+    }
+    {
+        try
+        {
+            std::cout << "THIRD TEST" << std::endl;
+            std::cout << "---------------------------------------------------" << std::endl;
+            ShrubberyCreationForm prueba("Invalid");
+            Bureaucrat hello("home", 26);
+            
+            hello.signForm(prueba);
+            hello.executeForm(prueba);
+
+            std::cout << hello << std::endl;
+            std::cout << "---------------------------------------------------" << std::endl;
+
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << "This is the error: " << e.what() << std::endl;
+        }
+    }
     return 0;
 }
