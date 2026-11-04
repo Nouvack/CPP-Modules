@@ -20,8 +20,7 @@ int main()
     {
         try
         {
-            std::cout << "FIRST TEST" << std::endl;
-            std::cout << "---------------------------------------------------" << std::endl;
+            std::cout << "INVALID PRESIDENTIALPARDONFORM" << std::endl;
             PresidentialPardonForm prueba("Invalid");
             Bureaucrat hello("home", 26);
             
@@ -29,7 +28,6 @@ int main()
             hello.executeForm(prueba);
 
             std::cout << hello << std::endl;
-            std::cout << "---------------------------------------------------" << std::endl;
 
         }
         catch(const std::exception& e)
@@ -37,19 +35,37 @@ int main()
             std::cerr << "This is the error: " << e.what() << std::endl;
         }
     }
+    std::cout  << std::endl;
     {
         try
         {
-            std::cout << "SECOND TEST" << std::endl;
-            std::cout << "---------------------------------------------------" << std::endl;
+            std::cout << "VALID PRESIDENTIALPARDONFORM" << std::endl;
+            PresidentialPardonForm prueba("Criminal");
+            Bureaucrat hello("home", 1);
+            
+            hello.signForm(prueba);
+            hello.executeForm(prueba);
+
+            std::cout << hello << std::endl;
+
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << "This is the error: " << e.what() << std::endl;
+        }
+    }
+    std::cout  << std::endl;
+    {
+        try
+        {
+            std::cout << "INVALID ROBOTOMYREQUESTFORM" << std::endl;
             RobotomyRequestForm prueba("Invalid");
-            Bureaucrat hello("home", 26);
+            Bureaucrat hello("home", 126);
             
             hello.signForm(prueba);
             hello.executeForm(prueba);
 
             std::cout << hello << std::endl;
-            std::cout << "---------------------------------------------------" << std::endl;
 
         }
         catch(const std::exception& e)
@@ -57,19 +73,57 @@ int main()
             std::cerr << "This is the error: " << e.what() << std::endl;
         }
     }
+    std::cout  << std::endl;
     {
         try
         {
-            std::cout << "THIRD TEST" << std::endl;
-            std::cout << "---------------------------------------------------" << std::endl;
-            ShrubberyCreationForm prueba("Invalid");
-            Bureaucrat hello("home", 26);
+            std::cout << "VALID ROBOTOMYREQUESTFORM" << std::endl;
+            std::cout << "SECOND TEST" << std::endl;
+            RobotomyRequestForm prueba("valid");
+            Bureaucrat hello("home", 20);
             
             hello.signForm(prueba);
             hello.executeForm(prueba);
 
             std::cout << hello << std::endl;
-            std::cout << "---------------------------------------------------" << std::endl;
+
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << "This is the error: " << e.what() << std::endl;
+        }
+    }
+    std::cout  << std::endl;
+    {
+        try
+        {
+            std::cout << "INVALID SHRUBBERYCREATIONFORM" << std::endl;
+            ShrubberyCreationForm prueba("Invalid");
+            Bureaucrat hello("home", 146);
+            
+            hello.signForm(prueba);
+            hello.executeForm(prueba);
+
+            std::cout << hello << std::endl;
+
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << "This is the error: " << e.what() << std::endl;
+        }
+    }
+    std::cout  << std::endl;
+    {
+        try
+        {
+            std::cout << "VALID SHRUBBERYCREATIONFORM" << std::endl;
+            ShrubberyCreationForm prueba("Valid");
+            Bureaucrat hello("home", 1);
+            
+            hello.signForm(prueba);
+            hello.executeForm(prueba);
+
+            std::cout << hello << std::endl;
 
         }
         catch(const std::exception& e)

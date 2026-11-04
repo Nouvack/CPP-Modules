@@ -14,7 +14,7 @@
 #include "Bureaucrat.hpp"
 
 
-Bureaucrat::Bureaucrat() :_name("Default")
+Bureaucrat::Bureaucrat() :_name("Default"), _grade(5)
 {
     std::cout << "Bureaucrat default constructor called" << std::endl;
 }
@@ -38,7 +38,7 @@ Bureaucrat::~Bureaucrat()
     std::cout << "Bureaucrat destructor for " << _name << " called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat& other):_name(other._name)
+Bureaucrat::Bureaucrat(const Bureaucrat& other):_name(other._name), _grade(other._grade)
 {
 	std::cout << "Bureaucrat copy constructor called" << std::endl;
 }
@@ -63,23 +63,18 @@ const std::string& Bureaucrat::getName() const
     return(_name);
 }
 
-
 void Bureaucrat::increment()
 {
-    if(_grade < 1 )
-    {
-        throw Bureaucrat::GradeTooLowException();
-    }
-    _grade--;
+    if (_grade <= 1)
+        throw Bureaucrat::GradeTooHighException();
+    --_grade;
 }
 
 void Bureaucrat::decrement()
 {
-    if(_grade > 150)
-    {
-        throw Bureaucrat::GradeTooHighException();
-    }
-    _grade--;
+    if (_grade >= 150)
+        throw Bureaucrat::GradeTooLowException();
+    ++_grade;
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw() {

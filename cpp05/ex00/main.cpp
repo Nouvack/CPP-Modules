@@ -14,8 +14,65 @@
 
 int main()
 {
-    Bureaucrat nig("hola", 10);
+    {
+        try
+        {
+            std::cout << "VALID BUREAUCRAT" << std::endl;
+
+            Bureaucrat diy("diy", 10);
     
-    std::cout << nig << std::endl;
+            std::cout << diy << std::endl;
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << e.what() << '\n';
+        }
+    }
+    std::cout << std::endl;
+    {
+        try
+        {
+            std::cout << "INVALID BUREAUCRAT" << std::endl;
+            Bureaucrat diy("diy", 0);
+    
+            std::cout << diy << std::endl;
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << e.what() << '\n';
+        }
+    }
+    std::cout << std::endl;
+    {
+        try
+        {
+            std::cout << "INVALID INCREMENT" << std::endl;
+            Bureaucrat diy("diy", 1);
+    
+            diy.increment();
+            std::cout << diy << std::endl;
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << e.what() << '\n';
+        }
+        
+    }
+    std::cout << std::endl;
+    {
+        try
+        {
+            std::cout << "VALID INCREMENT" << std::endl;
+            Bureaucrat diy("diy", 2);
+    
+            diy.increment();
+            std::cout << diy << std::endl;
+        }
+        catch(const std::exception& e)
+        {
+            std::cerr << e.what() << '\n';
+        }
+        
+    }
     return 0;
 }
