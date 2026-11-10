@@ -6,7 +6,7 @@
 #    By: nsantand <nsantand@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/17 11:25:55 by nsantand          #+#    #+#              #
-#    Updated: 2026/08/14 16:42:34 by nsantand         ###   ########.fr        #
+#    Updated: 2026/11/10 17:43:42 by nsantand         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,11 @@ BLUE      = \033[1;34m
 CYAN      = \033[1;36m
 DEF_COLOR = \033[0;39m
 
-NAME     := bureaucrat
+NAME     := convert
 CXX      := c++
 CXXFLAGS := -Wall -Wextra -Werror -std=c++98
 
-SRC := main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
+SRC := main.cpp ScalarConverter.cpp
 OBJ := $(SRC:.cpp=.o)
 
 all: $(NAME)
